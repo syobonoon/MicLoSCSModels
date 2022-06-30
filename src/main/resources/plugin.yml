@@ -1,0 +1,27 @@
+main: net.syobonoon.plugin.micloscsmodels.MicLoSCSModels
+name: MicLoSCSModels
+version: '${project.version}'
+api-version: 1.15
+
+commands:
+  ds:
+    description: You can get a gun.
+    permission: micloscrackshot.ds
+    permission-message: You don't have <permission>
+    usage: /<command> ShotName [amount]
+    
+  dsg:
+    description: You can get a gun GUI.
+    permission: micloscrackshot.dsg
+    permission-message: You don't have <permission>
+    usage: /<command>
+    
+permissions:
+  micloscrackshot.*:
+    children:
+      micloscrackshot.ds: true
+      micloscrackshot.dsg: true
+  micloscrackshot.ds:
+    default: op
+  micloscrackshot.dsg:
+    default: op
